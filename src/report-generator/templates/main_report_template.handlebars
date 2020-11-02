@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coverage Report</title>
+</head>
+
+<body>
+    <h1>Code Coverage Report</h1>
+    <hr>
+    <div class='flex-container'>
+        <div>
+            <p><strong>Current View: </strong> top level</p>
+            <p><strong>Date: </strong> {{prettyDate date}}</p>
+            <p><strong>Legend: </strong>
+                <span class="red">low: < 75%</span>
+                        <span class="yellow">medium: >= 75% < 100%</span>
+                                <span class="green">perfect: 100%</span></p>
+        </div>
+        <div>
+            <table class="summary-table">
+                <tr>
+                    <td></td>
+                    <td>Hit</td>
+                    <td>Total</td>
+                    <td>Coverage</td>
+                </tr>
+                <tr>
+                    <td class="bold">Lines:</td>
+                    <td class="default">{{linesHit}}</td>
+                    <td class="default">{{linesFound}}</td>
+                    <td class="{{coverageColor linesHit linesFound}}">
+                        {{coverage linesHit linesFound}}</td>
+                </tr>
+                <tr>
+                    <td class="bold">Functions:</td>
+                    <td class="default">{{functionsHit}}</td>
+                    <td class="default">{{functionsFound}}</td>
+                    <td class="{{coverageColor functionsHit functionsFound}}">
+                        {{coverage functionsHit functionsFound}}</td>
+                </tr>
+                <tr>
+                    <td class="bold">Branches:</td>
+                    <td class="default">{{branchesHit}}</td>
+                    <td class="default">{{branchesFound}}</td>
+                    <td class="{{coverageColor branchesHit branchesFound}}">
+                        {{coverage branchesHit branchesFound}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <table class=" main-table">
+        <tr>
+            <th>Directory</th>
+            <th colspan="2">Line Coverage</th>
+            <th colspan="2">Functions</th>
+            <th colspan="2">Branches</th>
+        </tr>
+        {{#each files as |file|}}
+        <tr>
+            <td class="default">{{file.path}}</td>
+            <td class="{{coverageColor file.linesHit file.linesFound}} bold">
+                {{coverage file.linesHit file.linesFound}}
+            </td>
+            <td class="{{coverageColor file.linesHit file.linesFound}}">
+                {{file.linesHit}} / {{file.linesFound}}
+            </td>
+            <td class="{{coverageColor file.functionsHit file.functionsFound}} bold">
+                {{coverage file.functionsHit file.functionsFound}}
+            </td>
+            <td class="{{coverageColor file.functionsHit file.functionsFound}}">
+                {{file.functionsHit}} / {{file.functionsFound}}
+            </td>
+            <td class="{{coverageColor file.branchesHit file.branchesFound}} bold">
+                {{coverage file.branchesHit file.branchesFound}}
+            </td>
+            <td class="{{coverageColor file.branchesHit file.branchesFound}}">
+                {{file.branchesHit}} / {{file.branchesFound}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+
+</html>
