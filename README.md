@@ -1,6 +1,6 @@
 # very-good-coverage-core
 
-A package for analyzing lcov.info files and generating reports from them for use in developer tools.
+A package for analyzing lcov.info files and generating reports from them for use in developer tools. Check out the online [documentation](https://mtwichel.github.io/very-good-coverage-core/) for details.
 
 ## Motivation
 This package is an attempt to abstract some core functionality from [very-good-coverage](https://github.com/VeryGoodOpenSource/very_good_coverage) to make things like very-good-coverage-cli, a CLI for processing lcov files, possible.
