@@ -18,9 +18,7 @@
   },
   "compileOnSave": true,
   "include": [
-    "src",
-    "test",
-    "example"
+    "src"
   ],
   "exclude": [
     "node_modules"

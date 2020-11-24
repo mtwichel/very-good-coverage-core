@@ -1,6 +1,6 @@
 {
   "name": "very-good-coverage-core",
-  "version": "0.0.1",
+  "version": "0.0.1-dev.1",
   "description": "A package for analyzing lcov.info files and generating reports from them for use in developer tools.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
