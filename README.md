@@ -1,5 +1,8 @@
 # very-good-coverage-core
 
+A package for analyzing lcov.info files and generating reports from them for use in developer tools.
+
+## Motivation
 This package is an attempt to abstract some core functionality from [very-good-coverage](https://github.com/VeryGoodOpenSource/very_good_coverage) to make things like very-good-coverage-cli, a CLI for processing lcov files, possible.
 
 More specifically it adds a typescript interface for defining coverage information, a parsing function to generate that interface, and functionality for generating html reports from `lcov.info` files.
