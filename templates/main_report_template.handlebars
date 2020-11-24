@@ -3,6 +3,60 @@
 
 <head>
     <title>Coverage Report</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            padding: 0% 5%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        table.main-table {
+            width: 100%;
+        }
+
+        table.main-table th {
+            color: #FFF;
+            background-color: cornflowerblue;
+            font-size: larger;
+        }
+
+        td,
+        th,
+        span {
+            padding: 0.4em;
+            vertical-align: middle;
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .yellow {
+            background-color: gold;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        td.bold {
+            font-weight: 800;
+        }
+
+        td.default {
+            color: dodgerblue;
+            background-color: skyblue;
+            padding: 0.25em;
+        }
+    </style>
 </head>
 
 <body>
@@ -13,9 +67,10 @@
             <p><strong>Current View: </strong> top level</p>
             <p><strong>Date: </strong> {{prettyDate date}}</p>
             <p><strong>Legend: </strong>
-                <span class="red">low: < 75%</span>
-                        <span class="yellow">medium: >= 75% < 100%</span>
-                                <span class="green">perfect: 100%</span></p>
+                <span class="red">low: below {{roundToTwoDecimals mediumThreshold}}%</span>
+                <span class="yellow">medium: between {{roundToTwoDecimals mediumThreshold}}% and
+                    {{roundToTwoDecimals highThreshold}}%</span>
+                <span class="green">high: above {{roundToTwoDecimals highThreshold}}%</span></p>
         </div>
         <div>
             <table class="summary-table">
@@ -59,7 +114,7 @@
         </tr>
         {{#each files as |file|}}
         <tr>
-            <td class="default">{{file.path}}</td>
+            <td class="default"><a href="./{{file.path}}.html">{{file.path}}</a></td>
             <td class="{{coverageColor file.linesHit file.linesFound}} bold">
                 {{coverage file.linesHit file.linesFound}}
             </td>

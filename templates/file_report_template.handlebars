@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{path}}</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            padding: 0% 5%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        table.main-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th,
+        span {
+            padding: 0.4em;
+            vertical-align: middle;
+
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .yellow {
+            background-color: gold;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: lightskyblue;
+        }
+
+        td.bold {
+            font-weight: 800;
+        }
+
+        td.default {
+            background-color: lightskyblue;
+            padding: 0.25em;
+        }
+
+        td.line-number {
+            background-color: gold;
+            padding: 0.25em;
+            text-align: right;
+        }
+
+        td.line {
+            white-space: pre;
+            border-left: 2px solid #222;
+        }
+
+        td.hit-count {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Code Coverage Report</h1>
+    <hr>
+    <div class='flex-container'>
+        <div>
+            <p><strong>Current View: </strong> {{path}}</p>
+            <p><strong>Date: </strong> {{prettyDate date}}</p>
+            <p><strong>Legend: </strong></p>
+            <p>
+                <span class="red">low: below {{roundToTwoDecimals mediumThreshold}}%</span>
+                <span class="yellow">medium: between {{roundToTwoDecimals mediumThreshold}}% and
+                    {{roundToTwoDecimals highThreshold}}%</span>
+                <span class="green">high: above {{roundToTwoDecimals highThreshold}}%</span></p>
+            <p>
+                <span class="blue">hit line</span>
+                <span class="red">missed line</span>
+        </div>
+        <div>
+            <table class="summary-table">
+                <tr>
+                    <td></td>
+                    <td>Hit</td>
+                    <td>Total</td>
+                    <td>Coverage</td>
+                </tr>
+                <tr>
+                    <td class="bold">Lines:</td>
+                    <td class="default">{{linesHit}}</td>
+                    <td class="default">{{linesFound}}</td>
+                    <td class="{{coverageColor linesHit linesFound}}">
+                        {{coverage linesHit linesFound}}</td>
+                </tr>
+                <tr>
+                    <td class="bold">Functions:</td>
+                    <td class="default">{{functionsHit}}</td>
+                    <td class="default">{{functionsFound}}</td>
+                    <td class="{{coverageColor functionsHit functionsFound}}">
+                        {{coverage functionsHit functionsFound}}</td>
+                </tr>
+                <tr>
+                    <td class="bold">Branches:</td>
+                    <td class="default">{{branchesHit}}</td>
+                    <td class="default">{{branchesFound}}</td>
+                    <td class="{{coverageColor branchesHit branchesFound}}">
+                        {{coverage branchesHit branchesFound}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <table class="main-table">
+        <tr>
+            <th>
+                Line #
+            </th>
+            <th>
+                Hit
+            </th>
+            <th>
+                Line
+            </th>
+        </tr>
+        {{#each lines as |line|}}
+        <tr>
+            <td class="line-number">{{line.lineNumber}}</td>
+            <td class="{{#if line.found}}{{#if line.hit}}default{{else}}red{{/if}}{{/if}} hit-count">
+                {{#if line.found}}{{line.hit}}{{/if}}</td>
+            <td class="{{#if line.found}}{{#if line.hit}}default{{else}}red{{/if}}{{/if}} line">{{line.lineContent~}}
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</body>
+
+</html>
