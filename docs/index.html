@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>very-good-coverage-core</title>
+	<meta name="description" content="Documentation for very-good-coverage-core">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">very-good-coverage-core</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>very-good-coverage-core</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#very-good-coverage-core" id="very-good-coverage-core" style="color: inherit; text-decoration: none;">
+					<h1>very-good-coverage-core</h1>
+				</a>
+				<p>A package for analyzing lcov.info files and generating reports from them for use in developer tools.</p>
+				<a href="#motivation" id="motivation" style="color: inherit; text-decoration: none;">
+					<h2>Motivation</h2>
+				</a>
+				<p>This package is an attempt to abstract some core functionality from <a href="https://github.com/VeryGoodOpenSource/very_good_coverage">very-good-coverage</a> to make things like very-good-coverage-cli, a CLI for processing lcov files, possible.</p>
+				<p>More specifically it adds a typescript interface for defining coverage information, a parsing function to generate that interface, and functionality for generating html reports from <code>lcov.info</code> files.</p>
+				<a href="#api" id="api" style="color: inherit; text-decoration: none;">
+					<h2>API</h2>
+				</a>
+				<p>This package exposes two functions you can use in your own project:</p>
+				<a href="#parselcov" id="parselcov" style="color: inherit; text-decoration: none;">
+					<h3>parseLcov</h3>
+				</a>
+				<p>This takes a path to your lcov file, and</p>
+				<ol>
+					<li>parses it using <a href="https://www.npmjs.com/package/parse-lcov">parse-lcov</a></li>
+					<li>reads the source files</li>
+					<li>combines them into a data structure returned by the function</li>
+				</ol>
+				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coverageDetails = parseLcov(<span class="hljs-string">&#x27;./coverage/lcov.info&#x27;</span>);</code></pre>
+				<a href="#generatereport" id="generatereport" style="color: inherit; text-decoration: none;">
+					<h3>generateReport</h3>
+				</a>
+				<p>This takes the coverageDetails object, and an output path, and builds html reports at that path.</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coverageDetails = parseLcov(<span class="hljs-string">&#x27;./coverage/lcov.info&#x27;</span>);
+generateReport(coverageDetails, <span class="hljs-string">&#x27;./coverage&#x27;</span>);</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/branchcoveragedetails.html" class="tsd-kind-icon">Branch<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/coveragedetails.html" class="tsd-kind-icon">Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/filecoveragedetails.html" class="tsd-kind-icon">File<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/functioncoveragedetails.html" class="tsd-kind-icon">Function<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-is-external">
+						<a href="interfaces/linecoveragedetails.html" class="tsd-kind-icon">Line<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#generatereport" class="tsd-kind-icon">generate<wbr>Report</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#parselcov" class="tsd-kind-icon">parse<wbr>Lcov</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Coverage Report</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            padding: 0% 5%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        table.main-table {
+            width: 100%;
+        }
+
+        table.main-table th {
+            color: #FFF;
+            background-color: cornflowerblue;
+            font-size: larger;
+        }
+
+        td,
+        th,
+        span {
+            padding: 0.4em;
+            vertical-align: middle;
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .yellow {
+            background-color: gold;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        td.bold {
+            font-weight: 800;
+        }
+
+        td.default {
+            color: dodgerblue;
+            background-color: skyblue;
+            padding: 0.25em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Code Coverage Report</h1>
+    <hr>
+    <div class='flex-container'>
+        <div>
+            <p><strong>Current View: </strong> top level</p>
+            <p><strong>Date: </strong> 11/24/2020, 1:19:17 AM</p>
+            <p><strong>Legend: </strong>
+                <span class="red">low: below 50%</span>
+                <span class="yellow">medium: between 50% and
+                    95%</span>
+                <span class="green">high: above 95%</span></p>
+        </div>
+        <div>
+            <table class="summary-table">
+                <tr>
+                    <td></td>
+                    <td>Hit</td>
+                    <td>Total</td>
+                    <td>Coverage</td>
+                </tr>
+                <tr>
+                    <td class="bold">Lines:</td>
+                    <td class="default">6</td>
+                    <td class="default">8</td>
+                    <td class="yellow">
+                        75%</td>
+                </tr>
+                <tr>
+                    <td class="bold">Functions:</td>
+                    <td class="default">1</td>
+                    <td class="default">1</td>
+                    <td class="green">
+                        100%</td>
+                </tr>
+                <tr>
+                    <td class="bold">Branches:</td>
+                    <td class="default">8</td>
+                    <td class="default">10</td>
+                    <td class="yellow">
+                        80%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <table class=" main-table">
+        <tr>
+            <th>Directory</th>
+            <th colspan="2">Line Coverage</th>
+            <th colspan="2">Functions</th>
+            <th colspan="2">Branches</th>
+        </tr>
+        <tr>
+            <td class="default"><a href="./src/tell-fortune.ts.html">src/tell-fortune.ts</a></td>
+            <td class="yellow bold">
+                75%
+            </td>
+            <td class="yellow">
+                6 / 8
+            </td>
+            <td class="green bold">
+                100%
+            </td>
+            <td class="green">
+                1 / 1
+            </td>
+            <td class="yellow bold">
+                80%
+            </td>
+            <td class="yellow">
+                8 / 10
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
