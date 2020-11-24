@@ -10,7 +10,8 @@
     "test": "mocha --require ts-node/register test/**/*.test.ts",
     "coverage": "nyc --reporter lcovonly npm run test",
     "format:check": "prettier --check **/*.ts",
-    "format": "prettier --write **/*.ts"
+    "format": "prettier --write **/*.ts",
+    "docs": "node_modules/.bin/typedoc --out docs --mode file src/index.ts"
   },
   "author": "Marcus Twichel",
   "license": "MIT",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
+    "@types/fs-extra": "^9.0.4",
     "@types/mocha": "^8.0.3",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",
@@ -35,8 +37,8 @@
     "prettier": "^2.1.2",
     "prettier-eslint": "^11.0.0",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.7",
-    "@types/fs-extra": "^9.0.4"
+    "typedoc": "^0.19.2",
+    "typescript": "^3.9.7"
   },
   "prettier": "@vgventures/prettier-config"
 }

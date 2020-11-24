@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>src/tell-fortune.ts</title>
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        body {
+            padding: 0% 5%;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        table.main-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th,
+        span {
+            padding: 0.4em;
+            vertical-align: middle;
+
+        }
+
+        .green {
+            background-color: lightgreen;
+        }
+
+        .yellow {
+            background-color: gold;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .blue {
+            background-color: lightskyblue;
+        }
+
+        td.bold {
+            font-weight: 800;
+        }
+
+        td.default {
+            background-color: lightskyblue;
+            padding: 0.25em;
+        }
+
+        td.line-number {
+            background-color: gold;
+            padding: 0.25em;
+            text-align: right;
+        }
+
+        td.line {
+            white-space: pre;
+            border-left: 2px solid #222;
+        }
+
+        td.hit-count {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Code Coverage Report</h1>
+    <hr>
+    <div class='flex-container'>
+        <div>
+            <p><strong>Current View: </strong> src/tell-fortune.ts</p>
+            <p><strong>Date: </strong> 11/24/2020, 1:19:17 AM</p>
+            <p><strong>Legend: </strong></p>
+            <p>
+                <span class="red">low: below 50%</span>
+                <span class="yellow">medium: between 50% and
+                    95%</span>
+                <span class="green">high: above 95%</span></p>
+            <p>
+                <span class="blue">hit line</span>
+                <span class="red">missed line</span>
+        </div>
+        <div>
+            <table class="summary-table">
+                <tr>
+                    <td></td>
+                    <td>Hit</td>
+                    <td>Total</td>
+                    <td>Coverage</td>
+                </tr>
+                <tr>
+                    <td class="bold">Lines:</td>
+                    <td class="default">6</td>
+                    <td class="default">8</td>
+                    <td class="yellow">
+                        75%</td>
+                </tr>
+                <tr>
+                    <td class="bold">Functions:</td>
+                    <td class="default">1</td>
+                    <td class="default">1</td>
+                    <td class="green">
+                        100%</td>
+                </tr>
+                <tr>
+                    <td class="bold">Branches:</td>
+                    <td class="default">8</td>
+                    <td class="default">10</td>
+                    <td class="yellow">
+                        80%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <table class="main-table">
+        <tr>
+            <th>
+                Line #
+            </th>
+            <th>
+                Hit
+            </th>
+            <th>
+                Line
+            </th>
+        </tr>
+        <tr>
+            <td class="line-number">1</td>
+            <td class="default hit-count">
+                1</td>
+            <td class="default line">export function tellFortune(n: number): string {</td>
+        </tr>
+        <tr>
+            <td class="line-number">2</td>
+            <td class="default hit-count">
+                2</td>
+            <td class="default line">  if (n &lt;&#x3D; 0) {</td>
+        </tr>
+        <tr>
+            <td class="line-number">3</td>
+            <td class="default hit-count">
+                1</td>
+            <td class="default line">    return &#x27;This omen is very bad. Expect misfouturne to follow this week.&#x27;;</td>
+        </tr>
+        <tr>
+            <td class="line-number">4</td>
+            <td class="default hit-count">
+                1</td>
+            <td class="default line">  } else if (n &gt; 0 &amp;&amp; n &lt;&#x3D; 20) {</td>
+        </tr>
+        <tr>
+            <td class="line-number">5</td>
+            <td class="red hit-count">
+                0</td>
+            <td class="red line">    return &#x27;This means very good fortune for you. True love will find you when the snow falls lightly.&#x27;;</td>
+        </tr>
+        <tr>
+            <td class="line-number">6</td>
+            <td class="default hit-count">
+                1</td>
+            <td class="default line">  } else if (n &gt; 20 &amp;&amp; n &lt;&#x3D; 1000) {</td>
+        </tr>
+        <tr>
+            <td class="line-number">7</td>
+            <td class="default hit-count">
+                1</td>
+            <td class="default line">    return &#x27;Your day will be like any other day, no better, nor worse.&#x27;;</td>
+        </tr>
+        <tr>
+            <td class="line-number">7</td>
+            <td class=" hit-count">
+                </td>
+            <td class=" line">  } else {</td>
+        </tr>
+        <tr>
+            <td class="line-number">9</td>
+            <td class="red hit-count">
+                0</td>
+            <td class="red line">    return &#x27;Be warry of pyramid schemes today, as they may seem legitimate but are not good ways to start businesses.&#x27;;</td>
+        </tr>
+        <tr>
+            <td class="line-number">9</td>
+            <td class=" hit-count">
+                </td>
+            <td class=" line">  }</td>
+        </tr>
+        <tr>
+            <td class="line-number">10</td>
+            <td class=" hit-count">
+                </td>
+            <td class=" line">}</td>
+        </tr>
+        <tr>
+            <td class="line-number">11</td>
+            <td class=" hit-count">
+                </td>
+            <td class=" line"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
