@@ -1,5 +1,6 @@
 # very-good-coverage-core
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/mtwichel/very-good-coverage-core)
 ![GitHub](https://img.shields.io/github/license/mtwichel/very-good-coverage-core)
 
 A package for analyzing lcov.info files and generating reports from them for use in developer tools. Check out the online [documentation](https://mtwichel.github.io/very-good-coverage-core/) for details.
