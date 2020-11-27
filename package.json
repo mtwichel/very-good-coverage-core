@@ -1,12 +1,13 @@
 {
   "name": "very-good-coverage-core",
-  "version": "0.0.1-dev.1",
+  "version": "0.0.1-dev.2",
   "description": "A package for analyzing lcov.info files and generating reports from them for use in developer tools.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint --ext .ts .",
     "build": "tsc",
+    "build:watch": "tsc --watch",
     "test": "mocha --require ts-node/register test/**/*.test.ts",
     "coverage": "nyc --reporter lcovonly npm run test",
     "format:check": "prettier --check **/*.ts",
@@ -16,13 +17,15 @@
   "author": "Marcus Twichel",
   "license": "MIT",
   "dependencies": {
+    "fs-extra": "^9.0.1",
     "handlebars": "^4.7.6",
-    "parse-lcov": "^1.0.4",
-    "fs-extra": "^9.0.1"
+    "minimatch": "^3.0.4",
+    "parse-lcov": "^1.0.4"
   },
   "devDependencies": {
     "@types/chai": "^4.2.14",
     "@types/fs-extra": "^9.0.4",
+    "@types/minimatch": "^3.0.3",
     "@types/mocha": "^8.0.3",
     "@typescript-eslint/eslint-plugin": "^4.3.0",
     "@typescript-eslint/parser": "^4.3.0",

@@ -70,7 +70,6 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Interfaces</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/branchcoveragedetails.html" class="tsd-kind-icon">Branch<wbr>Coverage<wbr>Details</a></li>
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/coveragedetails.html" class="tsd-kind-icon">Coverage<wbr>Details</a></li>
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/filecoveragedetails.html" class="tsd-kind-icon">File<wbr>Coverage<wbr>Details</a></li>
 								<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/functioncoveragedetails.html" class="tsd-kind-icon">Function<wbr>Coverage<wbr>Details</a></li>
@@ -81,7 +80,11 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#generatereport" class="tsd-kind-icon">generate<wbr>Report</a></li>
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#getfunctiondetails" class="tsd-kind-icon">get<wbr>Function<wbr>Details</a></li>
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#getlinedetails" class="tsd-kind-icon">get<wbr>Line<wbr>Details</a></li>
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#lcovrecordtofilecoveragedetails" class="tsd-kind-icon">lcov<wbr>Record<wbr>ToFile<wbr>Coverage<wbr>Details</a></li>
 								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#parselcov" class="tsd-kind-icon">parse<wbr>Lcov</a></li>
+								<li class="tsd-kind-function tsd-is-external"><a href="globals.html#shouldbeexcluded" class="tsd-kind-icon">should<wbr>BeExcluded</a></li>
 							</ul>
 						</section>
 					</div>
@@ -99,22 +102,36 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/generate-report.ts#L6">generate-report.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/generate-report.ts#L13">generate-report.ts:13</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>detail: <a href="interfaces/coveragedetails.html" class="tsd-signature-type">CoverageDetails</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>A <code>CoverageDetails</code> object returned from the <code>parseLcov</code> method. These are the values that will be filled into the reports.</p>
+									</div>
 								</li>
 								<li>
 									<h5>outputPath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The path to where you would like the files written to.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> mediumThreshold: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0.75</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The percentage (0-1) of when cells should move from red to yellow. Defaults to 0.75.</p>
+									</div>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> highThreshold: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 1</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The percentage (0-1) of when cells should move from yellow to green. Defaults to 1.0.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -122,16 +139,94 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
-					<a name="parselcov" class="tsd-anchor"></a>
-					<h3>parse<wbr>Lcov</h3>
+					<a name="getfunctiondetails" class="tsd-anchor"></a>
+					<h3>get<wbr>Function<wbr>Details</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
-						<li class="tsd-signature tsd-kind-icon">parse<wbr>Lcov<span class="tsd-signature-symbol">(</span>lcovPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/coveragedetails.html" class="tsd-signature-type">CoverageDetails</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Function<wbr>Details<span class="tsd-signature-symbol">(</span>functionDetails<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">FunctionsDetails</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/functioncoveragedetails.html" class="tsd-signature-type">FunctionCoverageDetails</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/parse-lcov.ts#L10">parse-lcov.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/parse-lcov.ts#L146">parse-lcov.ts:146</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>functionDetails: <span class="tsd-signature-type">FunctionsDetails</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/functioncoveragedetails.html" class="tsd-signature-type">FunctionCoverageDetails</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+					<a name="getlinedetails" class="tsd-anchor"></a>
+					<h3>get<wbr>Line<wbr>Details</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Line<wbr>Details<span class="tsd-signature-symbol">(</span>line<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, record<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LCOVRecord</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/linecoveragedetails.html" class="tsd-signature-type">LineCoverageDetails</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/parse-lcov.ts#L120">parse-lcov.ts:120</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>line: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>index: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>record: <span class="tsd-signature-type">LCOVRecord</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/linecoveragedetails.html" class="tsd-signature-type">LineCoverageDetails</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+					<a name="lcovrecordtofilecoveragedetails" class="tsd-anchor"></a>
+					<h3>lcov<wbr>Record<wbr>ToFile<wbr>Coverage<wbr>Details</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">lcov<wbr>Record<wbr>ToFile<wbr>Coverage<wbr>Details<span class="tsd-signature-symbol">(</span>record<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">LCOVRecord</span>, excludedFiles<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/filecoveragedetails.html" class="tsd-signature-type">FileCoverageDetails</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/parse-lcov.ts#L94">parse-lcov.ts:94</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>record: <span class="tsd-signature-type">LCOVRecord</span></h5>
+								</li>
+								<li>
+									<h5>excludedFiles: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="interfaces/filecoveragedetails.html" class="tsd-signature-type">FileCoverageDetails</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+					<a name="parselcov" class="tsd-anchor"></a>
+					<h3>parse<wbr>Lcov</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">parse<wbr>Lcov<span class="tsd-signature-symbol">(</span>lcovPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, excludedFiles<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="interfaces/coveragedetails.html" class="tsd-signature-type">CoverageDetails</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/parse-lcov.ts#L18">parse-lcov.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -143,9 +238,46 @@
 							<ul class="tsd-parameters">
 								<li>
 									<h5>lcovPath: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The path to the <code>lcov.info</code> file.</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagDefault value">Default value</span> excludedFiles: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>And optional list of files to exclude from coverage results.
+											These files will still be parsed, but they will have the property <code>excluded</code> be true.
+										Also supports <code>globs</code> to describe file patterns. ie <code>**.g.dart</code>.</p>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="interfaces/coveragedetails.html" class="tsd-signature-type">CoverageDetails</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-external">
+					<a name="shouldbeexcluded" class="tsd-anchor"></a>
+					<h3>should<wbr>BeExcluded</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-external">
+						<li class="tsd-signature tsd-kind-icon">should<wbr>BeExcluded<span class="tsd-signature-symbol">(</span>fileName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, excludedFiles<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/parse-lcov.ts#L157">parse-lcov.ts:157</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>fileName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>excludedFiles: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -162,9 +294,6 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/branchcoveragedetails.html" class="tsd-kind-icon">Branch<wbr>Coverage<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/coveragedetails.html" class="tsd-kind-icon">Coverage<wbr>Details</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
@@ -180,7 +309,19 @@
 						<a href="globals.html#generatereport" class="tsd-kind-icon">generate<wbr>Report</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#getfunctiondetails" class="tsd-kind-icon">get<wbr>Function<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#getlinedetails" class="tsd-kind-icon">get<wbr>Line<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#lcovrecordtofilecoveragedetails" class="tsd-kind-icon">lcov<wbr>Record<wbr>ToFile<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#parselcov" class="tsd-kind-icon">parse<wbr>Lcov</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#shouldbeexcluded" class="tsd-kind-icon">should<wbr>BeExcluded</a>
 					</li>
 				</ul>
 			</nav>

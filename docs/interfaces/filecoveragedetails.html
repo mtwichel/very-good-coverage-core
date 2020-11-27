@@ -91,6 +91,8 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="filecoveragedetails.html#branchesfound" class="tsd-kind-icon">branches<wbr>Found</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="filecoveragedetails.html#brancheshit" class="tsd-kind-icon">branches<wbr>Hit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="filecoveragedetails.html#excluded" class="tsd-kind-icon">excluded</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="filecoveragedetails.html#functions" class="tsd-kind-icon">functions</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="filecoveragedetails.html#functionsfound" class="tsd-kind-icon">functions<wbr>Found</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="filecoveragedetails.html#functionshit" class="tsd-kind-icon">functions<wbr>Hit</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="filecoveragedetails.html#lines" class="tsd-kind-icon">lines</a></li>
@@ -110,7 +112,7 @@
 					<div class="tsd-signature tsd-kind-icon">branches<wbr>Found<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L19">model/file_coverage_details.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L21">model/file_coverage_details.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -125,7 +127,7 @@
 					<div class="tsd-signature tsd-kind-icon">branches<wbr>Hit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L17">model/file_coverage_details.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L19">model/file_coverage_details.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -135,12 +137,42 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="excluded" class="tsd-anchor"></a>
+					<h3>excluded</h3>
+					<div class="tsd-signature tsd-kind-icon">excluded<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L27">model/file_coverage_details.ts:27</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>If true, this file should be excluded from code coverage.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="functions" class="tsd-anchor"></a>
+					<h3>functions</h3>
+					<div class="tsd-signature tsd-kind-icon">functions<span class="tsd-signature-symbol">:</span> <a href="functioncoveragedetails.html" class="tsd-signature-type">FunctionCoverageDetails</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L13">model/file_coverage_details.ts:13</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Coverage details for each particular function.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="functionsfound" class="tsd-anchor"></a>
 					<h3>functions<wbr>Found</h3>
 					<div class="tsd-signature tsd-kind-icon">functions<wbr>Found<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L23">model/file_coverage_details.ts:23</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L25">model/file_coverage_details.ts:25</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -155,7 +187,7 @@
 					<div class="tsd-signature tsd-kind-icon">functions<wbr>Hit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L21">model/file_coverage_details.ts:21</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L23">model/file_coverage_details.ts:23</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -170,7 +202,7 @@
 					<div class="tsd-signature tsd-kind-icon">lines<span class="tsd-signature-symbol">:</span> <a href="linecoveragedetails.html" class="tsd-signature-type">LineCoverageDetails</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L11">model/file_coverage_details.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L11">model/file_coverage_details.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -185,7 +217,7 @@
 					<div class="tsd-signature tsd-kind-icon">lines<wbr>Found<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L15">model/file_coverage_details.ts:15</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L17">model/file_coverage_details.ts:17</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -200,7 +232,7 @@
 					<div class="tsd-signature tsd-kind-icon">lines<wbr>Hit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L13">model/file_coverage_details.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L15">model/file_coverage_details.ts:15</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -215,7 +247,7 @@
 					<div class="tsd-signature tsd-kind-icon">path<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/file_coverage_details.ts#L9">model/file_coverage_details.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/file_coverage_details.ts#L9">model/file_coverage_details.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -237,9 +269,6 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="branchcoveragedetails.html" class="tsd-kind-icon">Branch<wbr>Coverage<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="coveragedetails.html" class="tsd-kind-icon">Coverage<wbr>Details</a>
 					</li>
 				</ul>
@@ -252,6 +281,12 @@
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="filecoveragedetails.html#brancheshit" class="tsd-kind-icon">branches<wbr>Hit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="filecoveragedetails.html#excluded" class="tsd-kind-icon">excluded</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="filecoveragedetails.html#functions" class="tsd-kind-icon">functions</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="filecoveragedetails.html#functionsfound" class="tsd-kind-icon">functions<wbr>Found</a>
@@ -285,7 +320,19 @@
 						<a href="../globals.html#generatereport" class="tsd-kind-icon">generate<wbr>Report</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#getfunctiondetails" class="tsd-kind-icon">get<wbr>Function<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#getlinedetails" class="tsd-kind-icon">get<wbr>Line<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#lcovrecordtofilecoveragedetails" class="tsd-kind-icon">lcov<wbr>Record<wbr>ToFile<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
 						<a href="../globals.html#parselcov" class="tsd-kind-icon">parse<wbr>Lcov</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#shouldbeexcluded" class="tsd-kind-icon">should<wbr>BeExcluded</a>
 					</li>
 				</ul>
 			</nav>

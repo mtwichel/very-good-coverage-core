@@ -67,7 +67,9 @@
 				<a href="#very-good-coverage-core" id="very-good-coverage-core" style="color: inherit; text-decoration: none;">
 					<h1>very-good-coverage-core</h1>
 				</a>
-				<p>A package for analyzing lcov.info files and generating reports from them for use in developer tools.</p>
+				<p><img src="https://img.shields.io/github/package-json/v/mtwichel/very-good-coverage-core" alt="GitHub package.json version">
+				<img src="https://img.shields.io/github/license/mtwichel/very-good-coverage-core" alt="GitHub"></p>
+				<p>A package for analyzing lcov.info files and generating reports from them for use in developer tools. Check out the online <a href="https://mtwichel.github.io/very-good-coverage-core/">documentation</a> for details.</p>
 				<a href="#motivation" id="motivation" style="color: inherit; text-decoration: none;">
 					<h2>Motivation</h2>
 				</a>
@@ -87,12 +89,18 @@
 					<li>combines them into a data structure returned by the function</li>
 				</ol>
 				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coverageDetails = parseLcov(<span class="hljs-string">&#x27;./coverage/lcov.info&#x27;</span>);</code></pre>
+				<p>You can also pass a list of strings in <code>glob</code> format to mark files as excluded. They will still be included in the output object, but the files will have <code>excluded=true</code>.</p>
+				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coverageDetails = parseLcov(<span class="hljs-string">&#x27;./coverage/lcov.info&#x27;</span>, [
+  <span class="hljs-string">&#x27;**/*.g.dart&#x27;</span>,
+  <span class="hljs-string">&#x27;coverage/**&#x27;</span>
+]);</code></pre>
 				<a href="#generatereport" id="generatereport" style="color: inherit; text-decoration: none;">
 					<h3>generateReport</h3>
 				</a>
 				<p>This takes the coverageDetails object, and an output path, and builds html reports at that path.</p>
 				<pre><code class="language-typescript"><span class="hljs-keyword">const</span> coverageDetails = parseLcov(<span class="hljs-string">&#x27;./coverage/lcov.info&#x27;</span>);
 generateReport(coverageDetails, <span class="hljs-string">&#x27;./coverage&#x27;</span>);</code></pre>
+				<p>You can also specify when cells in the report should be yellow or green by specifying the <code>mediumThreshold</code> and <code>highThreshold</code>.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -105,9 +113,6 @@ generateReport(coverageDetails, <span class="hljs-string">&#x27;./coverage&#x27;
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="interfaces/branchcoveragedetails.html" class="tsd-kind-icon">Branch<wbr>Coverage<wbr>Details</a>
-					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="interfaces/coveragedetails.html" class="tsd-kind-icon">Coverage<wbr>Details</a>
 					</li>
@@ -124,7 +129,19 @@ generateReport(coverageDetails, <span class="hljs-string">&#x27;./coverage&#x27;
 						<a href="globals.html#generatereport" class="tsd-kind-icon">generate<wbr>Report</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#getfunctiondetails" class="tsd-kind-icon">get<wbr>Function<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#getlinedetails" class="tsd-kind-icon">get<wbr>Line<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#lcovrecordtofilecoveragedetails" class="tsd-kind-icon">lcov<wbr>Record<wbr>ToFile<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
 						<a href="globals.html#parselcov" class="tsd-kind-icon">parse<wbr>Lcov</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="globals.html#shouldbeexcluded" class="tsd-kind-icon">should<wbr>BeExcluded</a>
 					</li>
 				</ul>
 			</nav>

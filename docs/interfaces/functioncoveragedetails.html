@@ -66,6 +66,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Parsed details of whether a function was ran.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -81,6 +88,7 @@
 						<section class="tsd-index-section tsd-is-external">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="functioncoveragedetails.html#found" class="tsd-kind-icon">found</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="functioncoveragedetails.html#hit" class="tsd-kind-icon">hit</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="functioncoveragedetails.html#line" class="tsd-kind-icon">line</a></li>
 								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="functioncoveragedetails.html#name" class="tsd-kind-icon">name</a></li>
@@ -92,14 +100,34 @@
 			<section class="tsd-panel-group tsd-member-group tsd-is-external">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a name="found" class="tsd-anchor"></a>
+					<h3>found</h3>
+					<div class="tsd-signature tsd-kind-icon">found<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/function_coverage_details.ts#L10">model/function_coverage_details.ts:10</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether this function was found as a function that should be tested.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="hit" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagOptional">Optional</span> hit</h3>
 					<div class="tsd-signature tsd-kind-icon">hit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/function_coverage_details.ts#L4">model/function_coverage_details.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/function_coverage_details.ts#L8">model/function_coverage_details.ts:8</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>How many times the function was hit.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="line" class="tsd-anchor"></a>
@@ -107,19 +135,29 @@
 					<div class="tsd-signature tsd-kind-icon">line<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/function_coverage_details.ts#L3">model/function_coverage_details.ts:3</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/function_coverage_details.ts#L6">model/function_coverage_details.ts:6</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The line number where this function is declared.</p>
+						</div>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 					<a name="name" class="tsd-anchor"></a>
-					<h3>name</h3>
-					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/760a642/src/model/function_coverage_details.ts#L2">model/function_coverage_details.ts:2</a></li>
+							<li>Defined in <a href="https://github.com/mtwichel/very-good-coverage-core/blob/c50e986/src/model/function_coverage_details.ts#L4">model/function_coverage_details.ts:4</a></li>
 						</ul>
 					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The name of the function.</p>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
@@ -134,9 +172,6 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-interface tsd-is-external">
-						<a href="branchcoveragedetails.html" class="tsd-kind-icon">Branch<wbr>Coverage<wbr>Details</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-external">
 						<a href="coveragedetails.html" class="tsd-kind-icon">Coverage<wbr>Details</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-external">
@@ -147,6 +182,9 @@
 					<li class="current tsd-kind-interface tsd-is-external">
 						<a href="functioncoveragedetails.html" class="tsd-kind-icon">Function<wbr>Coverage<wbr>Details</a>
 						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+								<a href="functioncoveragedetails.html#found" class="tsd-kind-icon">found</a>
+							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
 								<a href="functioncoveragedetails.html#hit" class="tsd-kind-icon">hit</a>
 							</li>
@@ -167,7 +205,19 @@
 						<a href="../globals.html#generatereport" class="tsd-kind-icon">generate<wbr>Report</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#getfunctiondetails" class="tsd-kind-icon">get<wbr>Function<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#getlinedetails" class="tsd-kind-icon">get<wbr>Line<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#lcovrecordtofilecoveragedetails" class="tsd-kind-icon">lcov<wbr>Record<wbr>ToFile<wbr>Coverage<wbr>Details</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
 						<a href="../globals.html#parselcov" class="tsd-kind-icon">parse<wbr>Lcov</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-external">
+						<a href="../globals.html#shouldbeexcluded" class="tsd-kind-icon">should<wbr>BeExcluded</a>
 					</li>
 				</ul>
 			</nav>

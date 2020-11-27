@@ -53,7 +53,7 @@
 
         td.default {
             color: dodgerblue;
-            background-color: skyblue;
+            background-color: lightskyblue;
             padding: 0.25em;
         }
     </style>
@@ -73,11 +73,44 @@
                 <span class="green">high: above {{roundToTwoDecimals highThreshold}}%</span></p>
         </div>
         <div>
+            <h5>Including Excluded Files</h5>
             <table class="summary-table">
                 <tr>
                     <td></td>
                     <td>Hit</td>
-                    <td>Total</td>
+                    <td>Found</td>
+                    <td>Coverage</td>
+                </tr>
+                <tr>
+                    <td class="bold">Lines:</td>
+                    <td class="default">{{totalLinesHit}}</td>
+                    <td class="default">{{totalLinesFound}}</td>
+                    <td class="{{coverageColor totalLinesHit totalLinesFound}}">
+                        {{coverage totalLinesHit totalLinesFound}}</td>
+                </tr>
+                <tr>
+                    <td class="bold">Functions:</td>
+                    <td class="default">{{totalFunctionsHit}}</td>
+                    <td class="default">{{totalFunctionsHit}}</td>
+                    <td class="{{coverageColor totalFunctionsHit totalFunctionsHit}}">
+                        {{coverage totalFunctionsHit totalFunctionsHit}}</td>
+                </tr>
+                <tr>
+                    <td class="bold">Branches:</td>
+                    <td class="default">{{totalBranchesHit}}</td>
+                    <td class="default">{{totalBranchesFound}}</td>
+                    <td class="{{coverageColor totalBranchesHit totalBranchesFound}}">
+                        {{coverage totalBranchesHit totalBranchesFound}}</td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <h5>Not Including Excluded Files</h5>
+            <table class="summary-table">
+                <tr>
+                    <td></td>
+                    <td>Hit</td>
+                    <td>Found</td>
                     <td>Coverage</td>
                 </tr>
                 <tr>
@@ -108,6 +141,7 @@
     <table class=" main-table">
         <tr>
             <th>Directory</th>
+            <th>Excluded</th>
             <th colspan="2">Line Coverage</th>
             <th colspan="2">Functions</th>
             <th colspan="2">Branches</th>
@@ -115,6 +149,7 @@
         {{#each files as |file|}}
         <tr>
             <td class="default"><a href="./{{file.path}}.html">{{file.path}}</a></td>
+            <td class="default">{{#if file.excluded}}Yes{{else}}No{{/if}}</td>
             <td class="{{coverageColor file.linesHit file.linesFound}} bold">
                 {{coverage file.linesHit file.linesFound}}
             </td>
