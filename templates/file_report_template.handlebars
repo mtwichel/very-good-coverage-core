@@ -80,6 +80,7 @@
         <div>
             <p><strong>Current View: </strong> {{path}}</p>
             <p><strong>Date: </strong> {{prettyDate date}}</p>
+            <p><strong>Excluded: </strong>{{#if excluded}}Yes{{else}}No{{/if}}</p>
             <p><strong>Legend: </strong></p>
             <p>
                 <span class="red">low: below {{roundToTwoDecimals mediumThreshold}}%</span>

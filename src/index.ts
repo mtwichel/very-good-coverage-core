@@ -1,5 +1,4 @@
 export {
-  BranchCoverageDetails,
   CoverageDetails,
   FileCoverageDetails,
   FunctionCoverageDetails,
