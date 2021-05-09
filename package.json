@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "fs-extra": "^9.0.1",
-    "handlebars": "^4.7.6",
+    "handlebars": "^4.7.7",
     "minimatch": "^3.0.4",
     "parse-lcov": "^1.0.4"
   },
