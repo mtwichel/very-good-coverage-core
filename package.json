@@ -19,7 +19,7 @@
   "dependencies": {
     "fs-extra": "^9.0.1",
     "handlebars": "^4.7.6",
-    "minimatch": "^3.0.4",
+    "minimatch": "^3.0.5",
     "parse-lcov": "^1.0.4"
   },
   "devDependencies": {
